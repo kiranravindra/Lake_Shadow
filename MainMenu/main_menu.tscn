@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cullk2nnmf6ii"]
+
+[ext_resource type="Script" uid="uid://grfld07gfwpp" path="res://MainMenu/main_menu.gd" id="1_3w4mj"]
+[ext_resource type="Texture2D" uid="uid://b0gandchk17a8" path="res://MainMenu/main_menu_image.png" id="2_3w4mj"]
+
+[node name="MainMenu" type="Control" unique_id=627361158]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3w4mj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1348953706]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=1398910759]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_3w4mj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=334592354]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5807292
+anchor_top = 0.42824075
+anchor_right = 0.7170139
+anchor_bottom = 0.6334877
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/separation = 20
+metadata/_edit_use_anchors_ = true
+
+[node name="StartButton" type="Button" parent="VBoxContainer" unique_id=1982048117]
+modulate = Color(0.62186736, 0.755622, 0.97526187, 1)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.8431393, 0.91903305, 0.9793872, 1)
+text = "ENTER THE MANOR"
+
+[node name="OptionsButton" type="Button" parent="VBoxContainer" unique_id=998360619]
+layout_mode = 2
+text = "SETTINGS"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer" unique_id=5997575]
+layout_mode = 2
+text = "LEAVE"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]

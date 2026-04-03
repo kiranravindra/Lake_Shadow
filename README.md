@@ -1,4 +1,6 @@
-# The Mirror Protocol: Lake Shadow 🔍🪞
+# LAKE SHADOW 🌲💧
+### Episode 1: Reflections of Guilt
+**Developed by Freedom Obscura Studios**
 
 A psychological suspense thriller and puzzle-escape adventure built in **Godot 4**.
 
