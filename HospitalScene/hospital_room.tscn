@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://dfuhpjflfkgce"]
+
+[ext_resource type="Texture2D" uid="uid://k1oo0yaw0mj" path="res://HospitalScene/sleeping_in_hospital.png" id="1_dtff6"]
+[ext_resource type="Script" uid="uid://vp66q11h8fx3" path="res://HospitalScene/hospital_room.gd" id="1_v4lan"]
+[ext_resource type="Texture2D" uid="uid://baqnfj5adjbmb" path="res://HospitalScene/temp_drip_removed.png" id="3_su603"]
+[ext_resource type="Texture2D" uid="uid://c85et38rr0s83" path="res://HospitalScene/palm.jpg" id="4_su603"]
+
+[node name="HospitalRoom" type="Control" unique_id=621575434]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_right = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v4lan")
+image_no_drip = ExtResource("3_su603")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=941131925]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect" unique_id=360932494]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_dtff6")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="TextureButton" type="TextureButton" parent="ColorRect/TextureRect" unique_id=1350945354]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15833333
+anchor_top = 0.77592593
+anchor_right = 0.26979166
+anchor_bottom = 0.92314816
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureButton2" type="TextureButton" parent="ColorRect/TextureRect" unique_id=977685555]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.2625
+anchor_top = 0.6398148
+anchor_right = 0.35885417
+anchor_bottom = 0.79814816
+offset_left = 3.0517578e-05
+metadata/_edit_use_anchors_ = true
+
+[node name="PalmView" type="TextureRect" parent="." unique_id=1415529351]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_su603")
+
+[node name="Button" type="Button" parent="PalmView" unique_id=933303148]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 497.0
+offset_right = 105.0
+offset_bottom = 581.0
+text = "Back"
+
+[connection signal="pressed" from="ColorRect/TextureRect/TextureButton" to="." method="_on_needle_button_pressed"]
+[connection signal="pressed" from="ColorRect/TextureRect/TextureButton2" to="." method="_on_palm_button_pressed"]
+[connection signal="pressed" from="PalmView/Button" to="." method="_on_back_button_pressed"]

@@ -94,7 +94,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ch8p0")
 expand_mode = 1
-stretch_mode = 5
+stretch_mode = 6
 
 [node name="GameLogo" type="TextureRect" parent="." unique_id=976040190]
 modulate = Color(1, 1, 1, 0)
@@ -106,7 +106,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_rigjj")
 expand_mode = 1
-stretch_mode = 5
+stretch_mode = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=322019141]
 root_node = NodePath("../CompanyLogo")
